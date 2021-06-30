@@ -121,7 +121,7 @@ export default {
         password_confirmation: this.passwordConfirmation,
       };
       axios
-        .post("/users", params)
+        .post("/students", params)
         .then((response) => {
           console.log(response.data);
           this.$router.push("/login");
