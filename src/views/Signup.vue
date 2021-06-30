@@ -32,10 +32,40 @@
         <small v-if="password != passwordConfirmation" class="text-danger">Passwords must match!</small>
       </div>
       <div>
-        <label>Phone Number</label>
+        <label>Phone Number:</label>
         <input type="text" v-model="phone_number" />
         <br />
-        <small v-if="phone_number.length < 10" class="text-danger">Phone number must be atleast 10 digits!</small>
+        <small v-if="phone_number.length > 7 && phone_number.length < 10" class="text-danger">
+          Phone number must be atleast 10 digits!
+        </small>
+      </div>
+      <div>
+        <label>Bio: (Give us a brief summary of yourself!)</label>
+        <input type="text" v-model="bio" />
+      </div>
+      <div>
+        <label>LinkedIn URL:</label>
+        <input type="url" v-model="linkedin" />
+      </div>
+      <div>
+        <label>Twitter Handle:</label>
+        <input type="text" v-model="twitter_handle" />
+      </div>
+      <div>
+        <label>Personal Website URL:</label>
+        <input type="url" v-model="website" />
+      </div>
+      <div>
+        <label>Resume URL:</label>
+        <input type="url" v-model="resume_url" />
+      </div>
+      <div>
+        <label>GitHub:</label>
+        <input type="url" v-model="github" />
+      </div>
+      <div>
+        <label>Photo: (Show us that smile!)</label>
+        <input type="image" v-model="photo" />
       </div>
       <input type="submit" value="Submit" />
     </form>
@@ -53,6 +83,13 @@ export default {
       password: "",
       passwordConfirmation: "",
       phone_number: "",
+      bio: "",
+      linkedin: "",
+      twitter_handle: "",
+      website: "",
+      resume_url: "",
+      github: "",
+      photo: "",
       errors: [],
       status: null,
     };
