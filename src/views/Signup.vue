@@ -1,76 +1,91 @@
 <template>
-  <div class="signup">
-    <form v-on:submit.prevent="submit()">
-      <h1>Signup</h1>
-      <ul>
-        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-      </ul>
-      <div>
-        <label>First Name:</label>
-        <input type="text" v-model="first_name" />
-      </div>
-      <div>
-        <label>Last Name:</label>
-        <input type="text" v-model="last_name" />
-      </div>
-      <div>
-        <label>Email:</label>
-        <input type="email" v-model="email" />
-        <br />
-        <small v-if="email.length == 6">+ 9 = Fuggin Nice</small>
-      </div>
-      <div>
-        <label>Password:</label>
-        <input type="password" v-model="password" />
-        <br />
-        <small v-if="password.length > 0 && password.length < 6" class="text-danger">
-          Password MUST be atleast 6 characters!
-        </small>
-      </div>
-      <div>
-        <label>Password confirmation:</label>
-        <input type="password" v-model="passwordConfirmation" />
-        <br />
-        <small v-if="password != passwordConfirmation" class="text-danger">Passwords must match!</small>
-      </div>
-      <div>
-        <label>Phone Number:</label>
-        <input type="text" v-model="phone_number" />
-        <br />
-        <small v-if="phone_number.length > 7 && phone_number.length < 10" class="text-danger">
-          Phone number must be atleast 10 digits!
-        </small>
-      </div>
-      <div>
-        <label>Bio: (Give us a brief summary of yourself!)</label>
-        <input type="text" v-model="bio" />
-      </div>
-      <div>
-        <label>LinkedIn URL:</label>
-        <input type="url" v-model="linkedin" />
-      </div>
-      <div>
-        <label>Twitter Handle:</label>
-        <input type="text" v-model="twitter_handle" />
-      </div>
-      <div>
-        <label>Personal Website URL:</label>
-        <input type="url" v-model="website" />
-      </div>
-      <div>
-        <label>Resume URL:</label>
-        <input type="url" v-model="resume_url" />
-      </div>
-      <div>
-        <label>GitHub:</label>
-        <input type="url" v-model="github" />
-      </div>
-      <div>
-        <label>Photo: (Show us that smile!)</label>
-        <input type="string" v-model="photo" />
-      </div>
-      <input type="submit" value="Submit" />
-    </form>
+  <div class="container-fluid">
+    <div class="signup card bg-gradient-light shadow mb-4">
+      <form v-on:submit.prevent="submit()">
+        <div class="card-header bg-dark py-3">
+          <h6 class="m-0 font-weight-bold text-white">Signup</h6>
+        </div>
+        <div class="container-fluid">
+          <ul>
+            <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+          </ul>
+          <div>
+            <label>First Name:</label>
+            <input type="text" v-model="first_name" />
+          </div>
+          <div>
+            <label>Last Name:</label>
+            <input type="text" v-model="last_name" />
+          </div>
+          <div>
+            <label>Email:</label>
+            <input type="email" v-model="email" />
+            <br />
+            <small v-if="email.length == 6">+ 9 = Fuggin Nice</small>
+          </div>
+          <div>
+            <label>Password:</label>
+            <input type="password" v-model="password" />
+            <br />
+            <small v-if="password.length > 0 && password.length < 6" class="text-danger">
+              Password MUST be atleast 6 characters!
+            </small>
+          </div>
+          <div>
+            <label>Password confirmation:</label>
+            <input type="password" v-model="passwordConfirmation" />
+            <br />
+            <small v-if="password != passwordConfirmation" class="text-danger">Passwords must match!</small>
+          </div>
+          <div>
+            <label>Phone Number:</label>
+            <input type="text" v-model="phone_number" />
+            <br />
+            <small v-if="phone_number.length > 7 && phone_number.length < 10" class="text-danger">
+              Phone number must be atleast 10 digits!
+            </small>
+          </div>
+          <div>
+            <label>Bio: (Give us a brief summary of yourself!)</label>
+            <input type="text" v-model="bio" />
+          </div>
+          <div>
+            <label>LinkedIn URL:</label>
+            <input type="url" v-model="linkedin" />
+          </div>
+          <div>
+            <label>Twitter Handle:</label>
+            <input type="text" v-model="twitter_handle" />
+          </div>
+          <div>
+            <label>Personal Website URL:</label>
+            <input type="url" v-model="website" />
+          </div>
+          <div>
+            <label>Resume URL:</label>
+            <input type="url" v-model="resume_url" />
+          </div>
+          <div>
+            <label>GitHub:</label>
+            <input type="url" v-model="github" />
+          </div>
+          <div>
+            <label>
+              Photo:
+              <div class="text-grey-30 small">Show us that smile!</div>
+            </label>
+            <input type="string" v-model="photo" />
+          </div>
+          <a href="#" class="btn btn-info btn-icon-split">
+            <span class="icon text-white-50">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+            <span class="text">Submit</span>
+          </a>
+          <!--<input type="submit" value="Submit" />!-->
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
