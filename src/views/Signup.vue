@@ -65,7 +65,7 @@
       </div>
       <div>
         <label>Photo: (Show us that smile!)</label>
-        <input type="image" v-model="photo" />
+        <input type="string" v-model="photo" />
       </div>
       <input type="submit" value="Submit" />
     </form>
