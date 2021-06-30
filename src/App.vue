@@ -6,7 +6,7 @@
 
       <!-- Topbar Search -->
       <div class="nav-item">
-        <a class="nav-link card bg-dark text-white shadow" href="/Home">
+        <a class="nav-link card bg-dark text-white shadow" href="/">
           <div class="card-body">Home</div>
         </a>
       </div>
