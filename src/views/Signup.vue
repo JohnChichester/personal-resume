@@ -79,7 +79,6 @@
               <i class="fas fa-arrow-right"></i>
             </span>
             <span class="text">Submit</span>
-            <break />
           </a>
           <!--<input type="submit" value="Submit" />!-->
         </div>
@@ -120,7 +119,7 @@ export default {
         password_confirmation: this.passwordConfirmation,
       };
       axios
-        .post("/users", params)
+        .post("/students", params)
         .then((response) => {
           console.log(response.data);
           this.$router.push("/login");
