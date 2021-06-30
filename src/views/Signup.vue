@@ -70,17 +70,16 @@
             <input type="url" v-model="github" />
           </div>
           <div>
-            <label>
-              Photo:
-              <div class="text-grey-30 small">Show us that smile!</div>
-            </label>
+            <label>Photo:</label>
             <input type="string" v-model="photo" />
+            <div class="text-grey-30 small">Show us that smile!</div>
           </div>
           <a href="#" class="btn btn-info btn-icon-split">
             <span class="icon text-white-50">
               <i class="fas fa-arrow-right"></i>
             </span>
             <span class="text">Submit</span>
+            <break />
           </a>
           <!--<input type="submit" value="Submit" />!-->
         </div>
