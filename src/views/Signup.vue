@@ -29,7 +29,13 @@
         <label>Password confirmation:</label>
         <input type="password" v-model="passwordConfirmation" />
         <br />
-        <small v-if="password != passwordConfirmation" class="text-dancer">Passwords must match!</small>
+        <small v-if="password != passwordConfirmation" class="text-danger">Passwords must match!</small>
+      </div>
+      <div>
+        <label>Phone Number</label>
+        <input type="text" v-model="phone_number" />
+        <br />
+        <small v-if="phone_number.length < 10" class="text-danger">Phone number must be atleast 10 digits!</small>
       </div>
       <input type="submit" value="Submit" />
     </form>
@@ -46,6 +52,7 @@ export default {
       email: "",
       password: "",
       passwordConfirmation: "",
+      phone_number: "",
       errors: [],
       status: null,
     };
