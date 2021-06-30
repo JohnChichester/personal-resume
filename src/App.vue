@@ -1,20 +1,17 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- Topbar -->
+    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+      <!-- Sidebar Toggle (Topbar) -->
+
+      <!-- Topbar Search -->
       <router-link to="/">Home</router-link>
       |
       <router-link to="/login">Login</router-link>
       |
       <router-link to="/signup">Sign Up</router-link>
-    </div>
-    <!-- Topbar -->
-    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-      <!-- Sidebar Toggle (Topbar) -->
-      <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-        <i class="fa fa-bars"></i>
-      </button>
-
-      <!-- Topbar Search -->
+      |
+      <router-link to="/logout">Log Out</router-link>
       <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
         <div class="input-group">
           <input
