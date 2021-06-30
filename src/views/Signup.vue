@@ -6,10 +6,12 @@
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
       </ul>
       <div>
-        <label>Name:</label>
-        <input type="text" v-model="name" />
-        <br />
-        <small>Username has {{ 20 - name.length }} characters remaining.</small>
+        <label>First Name:</label>
+        <input type="text" v-model="first_name" />
+      </div>
+      <div>
+        <label>Last Name:</label>
+        <input type="text" v-model="last_name" />
       </div>
       <div>
         <label>Email:</label>
@@ -78,7 +80,8 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      name: "",
+      first_name: "",
+      last_name: "",
       email: "",
       password: "",
       passwordConfirmation: "",
