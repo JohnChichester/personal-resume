@@ -10,17 +10,17 @@
           <div class="card-body">Home</div>
         </a>
       </div>
-      <div class="nav-item">
+      <div class="nav-item" v-if="!isLoggedIn()">
         <a class="nav-link card bg-secondary text-white shadow" href="/Login">
           <div class="card-body">Login</div>
         </a>
       </div>
-      <div class="nav-item">
+      <div class="nav-item" v-if="!isLoggedIn()">
         <a class="nav-link card bg-dark text-white shadow" href="/Signup">
           <div class="card-body">Signup</div>
         </a>
       </div>
-      <div class="nav-item">
+      <div class="nav-item" v-if="isLoggedIn()">
         <a class="nav-link card bg-secondary text-white shadow" href="/Logout">
           <div class="card-body">Logout</div>
         </a>
@@ -115,9 +115,27 @@
         </li>
       </ul>
     </nav>
+    <div v-if="flashMessage" v-on:click="flashMessage = null" class="alert alert-success" role="alert">
+      {{ flashMessage }}
+    </div>
     <!-- End of Topbar -->
     <router-view />
   </div>
 </template>
 
 <style></style>
+
+<script>
+export default {
+  data: function () {
+    return {
+      flashMessage: null,
+    };
+  },
+  methods: {
+    isLoggedIn: function () {
+      return localStorage.getItem("jwt");
+    },
+  },
+};
+</script>
