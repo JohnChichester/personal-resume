@@ -89,7 +89,9 @@
             aria-haspopup="true"
             aria-expanded="false"
           >
-            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+            <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+              {{ student.first_name + " " + student.last_name }}
+            </span>
             <img class="img-profile rounded-circle" src="img/undraw_profile.svg" />
           </a>
           <!-- Dropdown - User Information -->
@@ -126,15 +128,27 @@
 <style></style>
 
 <script>
+import axios from "axios";
 export default {
   data: function () {
     return {
+      student: {},
       flashMessage: null,
     };
   },
+  created: function () {
+    this.showStudents();
+  },
+
   methods: {
     isLoggedIn: function () {
       return localStorage.getItem("jwt");
+    },
+    showStudents: function () {
+      axios.get("/students/1").then((response) => {
+        console.log("show student profile", response.data);
+        this.student = response.data;
+      });
     },
   },
 };
