@@ -1,23 +1,75 @@
 <template>
-  <div>
+  <div class="container-fluid">
     <div class="card mb-4">
       <div class="card-header">
         <h1>{{ student.first_name + " " + student.last_name }}</h1>
+        <div class="text-primary-50 med">{{ student.email }}</div>
       </div>
       <div class="card-body">
-        This card uses Bootstrap's default styling with no utility classes added. Global styles are the only things
-        modifying the look and feel of this default card example.
+        {{ student.bio }}
       </div>
     </div>
-
-    <!-- Basic Card Example -->
-    <div class="card shadow mb-4">
-      <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Basic Card Example</h6>
+    <div class="row">
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Phone Number</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ student.phone_number }}</div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-phone fa-2x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card-body">
-        The styling for this basic card example is created by using default Bootstrap utility classes. By using utility
-        classes, the style of the card component can be easily modified with no need for any custom CSS!
+
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Website</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ student.website }}</div>
+              </div>
+              <div class="col-auto"></div>
+              <i class="fas fa-mouse fa-2x text-gray-300"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Twitter Handle</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ student.twitter_handle }}</div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-bird fa-2x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-danger shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">GitHub</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ student.github }}</div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-hack fa-2x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
