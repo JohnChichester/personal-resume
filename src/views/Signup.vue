@@ -25,15 +25,15 @@
           </div>
           <div>
             <label>Password:</label>
-            <input type="password" v-model="password" />
+            <input type="password" v-model="password_digest" />
             <br />
-            <small v-if="password.length > 0 && password.length < 6" class="text-danger">
+            <small v-if="password_digest.length > 0 && password_digest.length < 6" class="text-danger">
               Password MUST be atleast 6 characters!
             </small>
           </div>
           <div>
             <label>Password confirmation:</label>
-            <input type="password" v-model="passwordConfirmation" />
+            <input type="password" v-model="password_confirmation" />
             <br />
             <small v-if="password != passwordConfirmation" class="text-danger">Passwords must match!</small>
           </div>
@@ -82,7 +82,7 @@
             </span>
             <span class="text">Submit</span>
           </a>
-          <!--<input type="submit" value="Submit" />!-->
+          <input type="submit" value="Submit" />
         </div>
       </form>
     </div>
@@ -98,8 +98,8 @@ export default {
       first_name: "",
       last_name: "",
       email: "",
-      password: "",
-      passwordConfirmation: "",
+      password_digest: "",
+      password_confirmation: "",
       phone_number: "",
       bio: "",
       linkedin: "",
@@ -115,10 +115,19 @@ export default {
   methods: {
     submit: function () {
       var params = {
-        name: this.name,
+        first_name: this.first_name,
+        last_name: this.last_name,
         email: this.email,
-        password: this.password,
-        password_confirmation: this.passwordConfirmation,
+        password_digest: this.password_digest,
+        password_confirmation: this.password_confirmation,
+        phone_number: this.phone_number,
+        bio: this.bio,
+        linkedin: this.linkedin,
+        twitter_handle: this.twitter_handle,
+        website: this.website,
+        resume_url: this.resume_url,
+        github: this.github,
+        photo: this.photo,
       };
       axios
         .post("/students", params)
