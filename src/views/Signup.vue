@@ -78,9 +78,8 @@
             <span class="icon text-white-50">
               <i class="fas fa-arrow-right"></i>
             </span>
-            <span class="text">Submit</span>
+            <input class="bg-info" type="submit" value="Submit" />
           </a>
-          <input type="submit" value="Submit" />
         </div>
       </form>
     </div>
