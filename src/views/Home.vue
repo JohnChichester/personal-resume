@@ -6,73 +6,74 @@
       <input type="text" v-model="experiences" />
       <button type="submit" v-on:click="saveExperience()">Add an experience</button>
     </form>
-  <div class="container-fluid">
-    <div class="card mb-4">
-      <div class="card-header">
-        <h1>{{ student.first_name + " " + student.last_name }}</h1>
-        <div class="text-primary-50 med">{{ student.email }}</div>
+    <div class="container-fluid">
+      <div class="card mb-4">
+        <div class="card-header">
+          <h1>{{ student.first_name + " " + student.last_name }}</h1>
+          <div class="text-primary-50 med">{{ student.email }}</div>
+        </div>
+        <div class="card-body">
+          {{ student.bio }}
+        </div>
       </div>
-      <div class="card-body">
-        {{ student.bio }}
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-left-success shadow h-100 py-2">
-          <div class="card-body">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Phone Number</div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ student.phone_number }}</div>
-              </div>
-              <div class="col-auto">
-                <i class="fas fa-phone fa-2x text-gray-300"></i>
+      <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Phone Number</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{ student.phone_number }}</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-phone fa-2x text-gray-300"></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-left-warning shadow h-100 py-2">
-          <div class="card-body">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Website</div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ student.website }}</div>
-              </div>
-              <div class="col-auto"></div>
-              <i class="fas fa-mouse fa-2x text-gray-300"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-left-primary shadow h-100 py-2">
-          <div class="card-body">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Twitter Handle</div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ student.twitter_handle }}</div>
-              </div>
-              <div class="col-auto">
-                <i class="fas fa-bird fa-2x text-gray-300"></i>
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Website</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{ student.website }}</div>
+                </div>
+                <div class="col-auto"></div>
+                <i class="fas fa-mouse fa-2x text-gray-300"></i>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Twitter Handle</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{ student.twitter_handle }}</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-bird fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-left-danger shadow h-100 py-2">
-          <div class="card-body">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">GitHub</div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ student.github }}</div>
-              </div>
-              <div class="col-auto">
-                <i class="fas fa-hack fa-2x text-gray-300"></i>
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-danger shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">GitHub</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{ student.github }}</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-hack fa-2x text-gray-300"></i>
+                </div>
               </div>
             </div>
           </div>
