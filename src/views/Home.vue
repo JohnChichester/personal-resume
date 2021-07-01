@@ -1,12 +1,7 @@
 <template>
   <div>
-    <h1>Here is your profile:</h1>
-    <h2>{{ student }}</h2>
-    <form @submit.prevent="submit">
-      <input type="text" v-model="experiences" />
-      <button type="submit" v-on:click="saveExperience()">Add an experience</button>
-    </form>
     <div class="container-fluid">
+      <h1>Here is your profile:</h1>
       <div class="card mb-4">
         <div class="card-header">
           <h1>{{ student.first_name + " " + student.last_name }}</h1>
@@ -79,6 +74,22 @@
           </div>
         </div>
       </div>
+      <form @submit.prevent="saveExperience">
+        <input type="text" v-model="newExperience.company_name" />
+        <button type="submit">Add an experience</button>
+      </form>
+      <form @submit.prevent="saveExperience">
+        <input type="text" v-model="newExperience.company_name" />
+        <button type="submit">Add an education</button>
+      </form>
+      <form @submit.prevent="saveExperience">
+        <input type="text" v-model="newExperience.company_name" />
+        <button type="submit">Add a skill</button>
+      </form>
+      <form @submit.prevent="saveExperience">
+        <input type="text" v-model="newExperience.company_name" />
+        <button type="submit">Add a project</button>
+      </form>
     </div>
   </div>
 </template>
@@ -87,12 +98,12 @@
 
 <script>
 import axios from "axios";
-
 export default {
   data: function () {
     return {
       student: {},
       experiences: [],
+      newExperience: {},
     };
   },
   created: function () {
@@ -113,7 +124,9 @@ export default {
       });
     },
     saveExperience: function () {
-      this.experiences.push();
+      this.showExperiences();
+      this.student.experiences.push(this.newExperience);
+      this.newExperience = {};
     },
     showExperiences: function () {
       console.log(this.experiences);
